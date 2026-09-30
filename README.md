@@ -1,12 +1,5 @@
 # Shanglong Hu — Academic Homepage
 
-Static personal academic homepage for GitHub Pages.
+Source files for https://shanglonghu.github.io/.
 
-## Publish as a personal GitHub Pages site
-
-1. Create a repository named `ShanglongHu.github.io` under the `ShanglongHu` account.
-2. Upload the contents of this folder to the repository root and commit them to `main`.
-3. In the repository, open **Settings → Pages** and select **Deploy from a branch**, branch `main`, folder `/ (root)`.
-4. GitHub Pages will publish the site at `https://shanglonghu.github.io/` after the deployment completes.
-
-The homepage content is in `index.html`; appearance is in `style.css`.
+To update the site, upload `index.html`, `style.css`, and `portrait.jpg` to the root of the `ShanglongHu/ShanglongHu.github.io` repository on the `main` branch. GitHub Pages should use `main` and `/ (root)` as its source. The old `favicon.svg` may be deleted; the page no longer links to it.
