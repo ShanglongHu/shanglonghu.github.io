@@ -6,7 +6,6 @@ Static academic website: https://shanglonghu.github.io/.
 
 - `index.html`: biography, research interests, education, publication, and experience. The display portrait is embedded in this file.
 - `style.css`: all styling, responsive layouts, keyboard focus, and reduced-motion support.
-- `favicon.svg`: browser icon.
 - `project-predictive-state-representations.pdf`: summer-school project, linked from Experience.
 
 ## Preview and update
