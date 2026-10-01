@@ -1,7 +1,18 @@
 # Shanglong Hu — Academic Homepage
 
-Source files for https://shanglonghu.github.io/.
+Static academic website: https://shanglonghu.github.io/.
 
-Upload `index.html`, `style.css`, and `project-predictive-state-representations.pdf` to the root of `ShanglongHu/ShanglongHu.github.io` on `main`. The project title links to the included PDF.
+## Files
 
-The display portrait is embedded in `index.html`, so the site does not need a separate `portrait.jpg`. Once the new page is live, delete `portrait.jpg` from the repository if you do not want it in the current file list. Deleting it does not remove earlier Git history.
+- `index.html`: biography, research interests, education, publication, and experience. The display portrait is embedded in this file.
+- `style.css`: all styling, responsive layouts, keyboard focus, and reduced-motion support.
+- `favicon.svg`: browser icon.
+- `project-predictive-state-representations.pdf`: summer-school project, linked from Experience.
+
+## Preview and update
+
+Run `python -m http.server 8000` in this directory, then open http://localhost:8000. Edit the HTML for content or the CSS for appearance. Commit updates to `main` for GitHub Pages to publish them. When updating CSS, change its version query in `index.html` to avoid an older cached stylesheet.
+
+No build step, JavaScript, analytics, or external font service is required.
+
+The embedded portrait can still be extracted by website visitors. Removing a separate image file from the current branch does not remove it from earlier Git history.
