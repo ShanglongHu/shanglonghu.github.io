@@ -495,3 +495,7 @@ p { color:var(--body) }
 .headshot { width:195px; height:195px }
 @media(max-width:900px) { .headshot { width:175px; height:175px } }
 @media(max-width:700px) { .headshot { width:150px; height:150px } }
+
+.paper-links { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px }
+.paper-links a { display:inline-flex; align-items:center; padding:5px 14px; border:1px solid #aacbdc; border-radius:5px; background:#fff; color:#155878; font-size:.8rem; font-weight:600; line-height:1.6 }
+.paper-links a:hover { background:#eaf4f7; border-color:#7caabc; text-decoration:none }
