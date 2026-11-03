@@ -1,11 +1,11 @@
 :root {
   color-scheme:light;
-  --paper:#f7f8f5;
-  --text:#243b32;
-  --body:#46584e;
-  --muted:#68786e;
-  --accent:#28634e;
-  --line:#d9e1d8
+  --paper:#f8f7f4;
+  --text:#23334b;
+  --body:#48556a;
+  --muted:#66748a;
+  --accent:#315d85;
+  --line:#d7deea
 }
 
 * {
@@ -19,7 +19,7 @@ html {
 
 body {
   margin:0;
-  background:radial-gradient(circle at 82% 0%,#edf3eb 0,transparent 33rem),var(--paper);
+  background:#f8faf9;
   color:var(--text);
   font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
   -webkit-font-smoothing:antialiased
@@ -135,7 +135,7 @@ a:focus-visible {
   border-radius:4px
 }
 .sidebar nav a:hover {
-  background:#eaece5;
+  background:#e6edf7;
   color:var(--accent);
   text-decoration:none
 }
@@ -203,7 +203,7 @@ p {
   padding:15px 18px;
   background:#fff;
   border:1px solid var(--line);
-  border-left:2px solid #bdd3c3;
+  border-left:3px solid #7d9fc2;
   border-radius:6px;
   box-shadow:0 4px 16px #243b3208
 }
@@ -242,11 +242,11 @@ p {
 }
 
 .publication {
-  background:#fffefa;
+  background:#f2f6fc;
   padding:23px 26px;
   border:1px solid var(--line);
-  border-left:3px solid var(--accent);
-  border-radius:0 6px 6px 0;
+  border:1px solid #bed8ed;
+  border-radius:6px;
   box-shadow:0 5px 18px #243b3208
 }
 .publication h3 {
@@ -406,3 +406,92 @@ footer {
 }
 
 }
+
+.news {
+  padding:12px 16px;
+  background:#fff;
+  border:1px solid #bed8ed;
+  border-radius:6px;
+}
+.interest-list li:nth-child(2) { border-left-color:#81b8ae; background:#f3faf8 }
+.interest-list li:nth-child(3) { border-left-color:#80b9ac; background:#f2faf7 }
+
+/* A consistent, understated surface for each content block. */
+.news, .interest-list li, #education > div, .publication, #experience .entry {
+  background:#fff;
+  border:1px solid #d7e5ef;
+  border-radius:8px;
+  box-shadow:0 3px 14px rgba(35, 51, 75, .035);
+}
+.news { padding:14px 18px; margin-top:22px }
+.interest-list li, .interest-list li:nth-child(2), .interest-list li:nth-child(3) {
+  background:#fff;
+  border:1px solid #d7e5ef;
+  border-left:3px solid #a8cbdc;
+  padding:16px 18px;
+}
+#education > div { padding:20px 22px }
+.publication { padding:22px }
+#experience .entry { padding:20px 22px }
+.entry-date { color:#52748a }
+.award-label { color:#315d75; background:#eff7fa; border-color:#d3e7ef }
+.award-label:hover { background:#e4f2f6; border-color:#b8d8e4 }
+h2 { border-bottom-color:#d7e5ef }
+.sidebar nav a { border-radius:6px }
+@media(max-width:700px) {
+  #education > div, .publication, #experience .entry { padding:18px }
+}
+/* Profile-led layout inspired by the reference site. */
+body { background:#fff; color:#243449; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif }
+.topbar { border-bottom:1px solid #e3eaf0; background:#fff }
+.topbar-inner { max-width:1120px; min-height:70px; margin:auto; padding:0 40px; display:flex; align-items:center; justify-content:space-between; gap:24px }
+.brand { color:#243449; font-weight:700; font-size:1.15rem }
+.topbar nav { display:flex; flex-wrap:wrap; gap:28px }
+.topbar nav a { color:#344a60; font-size:.88rem; font-weight:600 }
+.layout { max-width:1120px; grid-template-columns:240px minmax(0,1fr); gap:70px }
+.sidebar { position:static; padding-top:76px }
+.headshot { width:180px; height:180px; border:4px solid #e3eef3; box-shadow:none; margin-bottom:22px }
+.name { font:700 1.75rem/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; letter-spacing:-.025em }
+.affiliation { font-size:.95rem }
+main { padding-top:76px; display:grid; grid-template-columns:1fr 1fr; column-gap:40px; align-items:start }
+section { margin-bottom:48px }
+#about, #publication, #experience, footer { grid-column:1 / -1 }
+#research { grid-column:1 }
+#education { grid-column:2 }
+.eyebrow { color:#487c8a; margin-bottom:12px }
+h2 { font:700 1.65rem/1.25 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; letter-spacing:-.025em; border:0; padding:0; margin-bottom:20px }
+.intro-section { margin-bottom:36px }
+.intro-section p:not(.eyebrow) { line-height:1.75 }
+.news { background:#fff; border:1px solid #bed8ed; border-radius:6px; box-shadow:none; padding:12px 16px }
+.interest-list li, .interest-list li:nth-child(2), .interest-list li:nth-child(3) { display:list-item; list-style:disc; background:transparent; border:0; border-radius:0; padding:0; margin:0 0 12px 19px; box-shadow:none }
+.interest-list strong, .interest-list span { display:block }
+.interest-list span { margin-top:2px }
+#education > div { background:transparent; border:0; padding:0; box-shadow:none }
+.publication, #experience .entry { background:#fff; border:1px solid #dce8ef; border-radius:8px; box-shadow:0 4px 20px rgba(35,51,75,.04); padding:22px }
+footer { width:100% }
+@media(max-width:900px) { .layout { grid-template-columns:200px minmax(0,1fr); gap:36px } .headshot { width:160px; height:160px } main { column-gap:25px } }
+@media(max-width:700px) { .topbar-inner { padding:16px 24px; flex-wrap:wrap; gap:12px } .topbar nav { gap:12px 20px } .layout { display:block; padding:0 24px } .sidebar { padding:38px 0 0 } .headshot { width:140px; height:140px } main { padding-top:28px; display:block } section { margin-bottom:36px } .interest-list li, .interest-list li:nth-child(2), .interest-list li:nth-child(3) { display:list-item } }
+
+/* Profile links and high-contrast, quiet blue palette. */
+:root { --text:#172d42; --body:#33485b; --muted:#526778; --accent:#155878; --line:#c6d9e3 }
+body { color:var(--text); background:#f9fbfc }
+p { color:var(--body) }
+.topbar { background:#fff; border-bottom-color:#cbdce5 }
+.brand, .topbar nav a { color:#17374d }
+.topbar nav a:hover, a:hover { color:#0b617d }
+.socials { display:flex; flex-direction:column; align-items:stretch; gap:2px; width:max-content; max-width:100%; margin:22px auto 0 }
+.socials a { width:auto; height:auto; justify-content:flex-start; gap:11px; padding:6px 10px; border-radius:6px; color:#155878; font-size:.88rem; font-weight:600 }
+.socials a:hover { background:#eaf4f7; border-color:#c6dce5 }
+.socials svg { flex:none; width:18px; height:18px }
+.headshot { border-color:#c9e0e5 }
+.news { border-color:#a8cce0; background:#fff }
+.publication, #experience .entry { border-color:#cbdce5; background:#fff }
+.publication .publication-venue, .entry-date, footer { color:#526778 }
+.interest-list span { color:#33485b }
+@media(max-width:700px) { .socials { margin:20px auto 0 } }
+
+.headshot { filter:brightness(1.15) }
+
+.headshot { width:195px; height:195px }
+@media(max-width:900px) { .headshot { width:175px; height:175px } }
+@media(max-width:700px) { .headshot { width:150px; height:150px } }
