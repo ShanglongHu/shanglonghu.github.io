@@ -518,3 +518,5 @@ p { color:var(--body) }
   .socials { flex-direction:column; width:max-content; align-items:stretch }
   .socials a { flex-direction:row; justify-content:flex-start; gap:11px }
 }
+
+@media(max-width:700px) and (orientation:portrait) { .sidebar #education { display:none } }
