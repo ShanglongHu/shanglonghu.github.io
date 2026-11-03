@@ -499,3 +499,11 @@ p { color:var(--body) }
 .paper-links { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px }
 .paper-links a { display:inline-flex; align-items:center; padding:5px 14px; border:1px solid #aacbdc; border-radius:5px; background:#fff; color:#155878; font-size:.8rem; font-weight:600; line-height:1.6 }
 .paper-links a:hover { background:#eaf4f7; border-color:#7caabc; text-decoration:none }
+
+/* Education follows the profile links in the sidebar. */
+.sidebar #education { margin:32px 0 0; padding-top:24px; border-top:1px solid var(--line) }
+.sidebar #education h2 { font-size:1.15rem; margin-bottom:14px }
+.sidebar #education h3 { font-size:.9rem; line-height:1.5 }
+.sidebar #education .entry-subtitle { font-size:.8rem; line-height:1.65; margin-bottom:5px }
+#research { grid-column:1 / -1 }
+@media(max-width:700px) { .sidebar #education { max-width:360px; margin:28px auto 0; padding-top:22px } }
