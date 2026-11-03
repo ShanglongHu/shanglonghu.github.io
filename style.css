@@ -507,3 +507,14 @@ p { color:var(--body) }
 .sidebar #education .entry-subtitle { font-size:.8rem; line-height:1.65; margin-bottom:5px }
 #research { grid-column:1 / -1 }
 @media(max-width:700px) { .sidebar #education { max-width:360px; margin:28px auto 0; padding-top:22px } }
+
+/* Compact profile links on portrait phones; stacked links in landscape. */
+@media(max-width:700px) and (orientation:portrait) {
+  .socials { flex-direction:row; justify-content:center; align-items:stretch; width:100%; max-width:360px; gap:4px; margin:22px auto 0 }
+  .socials a { flex:1 1 0; min-width:0; flex-direction:column; justify-content:flex-start; gap:7px; padding:8px 2px; text-align:center; font-size:.72rem; line-height:1.4 }
+  .socials svg { width:20px; height:20px }
+}
+@media(orientation:landscape) {
+  .socials { flex-direction:column; width:max-content; align-items:stretch }
+  .socials a { flex-direction:row; justify-content:flex-start; gap:11px }
+}
