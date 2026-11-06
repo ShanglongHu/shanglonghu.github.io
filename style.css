@@ -520,3 +520,4 @@ p { color:var(--body) }
 }
 
 @media(max-width:700px) and (orientation:portrait) { .sidebar #education { display:none } }
+
