@@ -3,90 +3,214 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8f7f4">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f141b" media="(prefers-color-scheme: dark)">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=3">
   <link rel="canonical" href="https://shanglonghu.github.io/">
-  <meta name="description" content="Shanglong Hu — undergraduate student at the University of Sydney, interested in reinforcement learning, formal theories of intelligence, and mind/consciousness.">
+  <meta name="description" content="Shanglong Hu — undergraduate in Mathematics and Computer Science at the University of Sydney, working on continual reinforcement learning and the evaluation of continual world models.">
   <meta name="analytics-endpoint" content="https://shanglonghu-analytics.shanglonghu-analytics.workers.dev/api/collect">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Shanglong Hu · Continual Reinforcement Learning">
+  <meta property="og:description" content="Undergraduate at the University of Sydney studying how agents keep learning as their environments change.">
+  <meta property="og:url" content="https://shanglonghu.github.io/">
+  <meta property="og:image" content="https://shanglonghu.github.io/headshot.png">
+  <meta name="twitter:card" content="summary">
   <title>Shanglong Hu · Academic Homepage</title>
-  <link rel="stylesheet" href="./style.css?v=21">
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("shl_theme"); } catch (e) {}
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap"></noscript>
+  <link rel="stylesheet" href="./style.css?v=30">
+  <script defer src="./script.js?v=1"></script>
   <script defer src="./analytics.js?v=2"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Shanglong Hu",
+      "url": "https://shanglonghu.github.io/",
+      "affiliation": { "@type": "CollegeOrUniversity", "name": "The University of Sydney" },
+      "knowsAbout": ["Continual Reinforcement Learning", "World Models", "Active Inference"],
+      "sameAs": [
+        "https://github.com/ShanglongHu",
+        "https://www.linkedin.com/in/shanglong-hu-27830b382/",
+        "https://scholar.google.com/citations?user=wJUHorMAAAAJ"
+      ]
+    }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <header class="topbar"><div class="topbar-inner"><a class="brand" href="#about">Shanglong Hu</a><nav aria-label="Page sections"><a href="#about">About</a><a href="#research">Research</a><a href="#publication">Papers</a><a href="#experience">Experience</a></nav></div></header>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#about" aria-label="Shanglong Hu, back to top">
+        <span class="brand-mark" aria-hidden="true">SH</span><span class="brand-name">Shanglong Hu</span>
+      </a>
+      <nav class="topnav" aria-label="Page sections">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publication">Papers</a>
+        <a href="#experience">Experience</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.7 14.6A8.6 8.6 0 0 1 9.4 3.3a.75.75 0 0 0-.98-.94A10.1 10.1 0 1 0 21.64 15.6a.75.75 0 0 0-.94-.98z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-5a1 1 0 0 1 1 1v1.5a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm0 17.5a1 1 0 0 1 1 1V21a1 1 0 1 1-2 0v-.5a1 1 0 0 1 1-1zM3 11h1.5a1 1 0 1 1 0 2H3a1 1 0 1 1 0-2zm16.5 0H21a1 1 0 1 1 0 2h-1.5a1 1 0 1 1 0-2zM5.64 4.22l1.06 1.06a1 1 0 0 1-1.42 1.42L4.22 5.64a1 1 0 0 1 1.42-1.42zm12.08 12.08 1.06 1.06a1 1 0 0 1-1.42 1.42l-1.06-1.06a1 1 0 0 1 1.42-1.42zM4.22 18.36l1.06-1.06a1 1 0 0 1 1.42 1.42l-1.06 1.06a1 1 0 0 1-1.42-1.42zM16.3 5.28l1.06-1.06a1 1 0 0 1 1.42 1.42L17.72 6.7a1 1 0 0 1-1.42-1.42z"/></svg>
+      </button>
+    </div>
+  </header>
+
   <div class="layout">
-    <aside class="sidebar">
-      <img class="headshot" src="./headshot.png" width="140" height="140" alt="Portrait of Shanglong Hu" decoding="async">
-      <h1 class="name">Shanglong Hu</h1>
-      <p class="affiliation">2nd-year Undergrad<br><a href="https://www.sydney.edu.au/">The University of Sydney</a></p>
-      <div class="socials">
-        <a href="mailto:shhu7334@uni.sydney.edu.au" aria-label="Email Shanglong Hu" title="Email">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm9 7L3.5 7h17L12 12zm0 2.4L3 8.7V17h18V8.7l-9 5.7z"/></svg><span>Email</span>
-        </a>
-        <a href="https://github.com/ShanglongHu" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" title="GitHub">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.33-3.8-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.66 1.23 3.31.94.1-.74.4-1.23.72-1.52-2.5-.28-5.13-1.25-5.13-5.57 0-1.23.44-2.23 1.17-3.02-.12-.28-.51-1.43.11-2.98 0 0 .95-.3 3.08 1.15a10.7 10.7 0 0 1 5.61 0c2.14-1.45 3.08-1.15 3.08-1.15.62 1.55.23 2.7.11 2.98.73.79 1.17 1.79 1.17 3.02 0 4.33-2.64 5.28-5.15 5.56.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8z"/></svg><span>GitHub</span>
-        </a>
-        <a href="https://www.linkedin.com/in/shanglong-hu-27830b382/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" title="LinkedIn">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 2H3.55A1.55 1.55 0 0 0 2 3.55v16.9A1.55 1.55 0 0 0 3.55 22h16.9A1.55 1.55 0 0 0 22 20.45V3.55A1.55 1.55 0 0 0 20.45 2zM8.1 18.7H5.3V9.6h2.8v9.1zM6.7 8.35a1.63 1.63 0 1 1 0-3.26 1.63 1.63 0 0 1 0 3.26zm12 10.35h-2.8v-4.43c0-1.06-.02-2.42-1.48-2.42-1.48 0-1.71 1.15-1.71 2.34v4.51h-2.8V9.6h2.69v1.24h.04a2.95 2.95 0 0 1 2.65-1.46c2.83 0 3.41 1.86 3.41 4.28v5.04z"/></svg><span>LinkedIn</span>
-        </a>
-        <a href="https://scholar.google.com/citations?user=wJUHorMAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar profile" title="Google Scholar">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 1 9l11 7 8-5.09V17h2V9L12 2zm-6 12.18V18c0 2.21 2.69 4 6 4s6-1.79 6-4v-3.82l-6 3.82-6-3.82z"/></svg><span>Google Scholar</span>
-        </a>
+    <aside class="sidebar" aria-label="Profile">
+      <div class="profile">
+        <img class="headshot" src="./headshot.webp" width="480" height="480" alt="Portrait of Shanglong Hu" decoding="async" fetchpriority="high">
+        <div class="profile-text">
+          <h1 class="name">Shanglong Hu</h1>
+          <p class="role">Undergraduate · Mathematics &amp; Computer Science</p>
+          <p class="affiliation"><a href="https://www.sydney.edu.au/" target="_blank" rel="noopener noreferrer">The University of Sydney</a></p>
+        </div>
       </div>
 
-      <section id="education">
-        <h2>Education</h2>
-        <div>
-          <h3>The University of Sydney</h3>
-          <p class="entry-subtitle">Bachelor of Science</p>
-          <p class="entry-subtitle">Expected graduation: Dec 2027</p>
-          <p class="entry-subtitle">Majors: Mathematics and Computer Science</p>
-        </div>
+      <ul class="socials" aria-label="Contact and profiles">
+        <li><a href="mailto:shhu7334@uni.sydney.edu.au" aria-label="Email Shanglong Hu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm9 7L3.5 7h17L12 12zm0 2.4L3 8.7V17h18V8.7l-9 5.7z"/></svg><span>Email</span>
+        </a></li>
+        <li><a href="https://scholar.google.com/citations?user=wJUHorMAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 1 9l11 7 8-5.09V17h2V9L12 2zm-6 12.18V18c0 2.21 2.69 4 6 4s6-1.79 6-4v-3.82l-6 3.82-6-3.82z"/></svg><span>Scholar</span>
+        </a></li>
+        <li><a href="https://github.com/ShanglongHu" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.33-3.8-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.66 1.23 3.31.94.1-.74.4-1.23.72-1.52-2.5-.28-5.13-1.25-5.13-5.57 0-1.23.44-2.23 1.17-3.02-.12-.28-.51-1.43.11-2.98 0 0 .95-.3 3.08 1.15a10.7 10.7 0 0 1 5.61 0c2.14-1.45 3.08-1.15 3.08-1.15.62 1.55.23 2.7.11 2.98.73.79 1.17 1.79 1.17 3.02 0 4.33-2.64 5.28-5.15 5.56.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8z"/></svg><span>GitHub</span>
+        </a></li>
+        <li><a href="https://www.linkedin.com/in/shanglong-hu-27830b382/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 2H3.55A1.55 1.55 0 0 0 2 3.55v16.9A1.55 1.55 0 0 0 3.55 22h16.9A1.55 1.55 0 0 0 22 20.45V3.55A1.55 1.55 0 0 0 20.45 2zM8.1 18.7H5.3V9.6h2.8v9.1zM6.7 8.35a1.63 1.63 0 1 1 0-3.26 1.63 1.63 0 0 1 0 3.26zm12 10.35h-2.8v-4.43c0-1.06-.02-2.42-1.48-2.42-1.48 0-1.71 1.15-1.71 2.34v4.51h-2.8V9.6h2.69v1.24h.04a2.95 2.95 0 0 1 2.65-1.46c2.83 0 3.41 1.86 3.41 4.28v5.04z"/></svg><span>LinkedIn</span>
+        </a></li>
+      </ul>
+
+      <section id="education" class="edu" aria-labelledby="education-title">
+        <h2 id="education-title" class="side-title">Education</h2>
+        <p class="edu-school">The University of Sydney</p>
+        <p class="edu-line">Bachelor of Science</p>
+        <p class="edu-line">Majors: Mathematics, Computer Science</p>
+        <p class="edu-line edu-date">Expected graduation: Dec 2027</p>
       </section>
     </aside>
 
-    <main id="main-content" tabindex="-1">
-      <section id="about" class="intro-section">
-        <h2>About</h2>
-        <p class="lead">I am a Bachelor of Science student at the University of Sydney, majoring in <strong>Mathematics and Computer Science</strong>.</p>
-        <p>I am primarily interested in <strong>Continual Reinforcement Learning</strong>. My goal is to understand how agents can continually learn and adapt as their environments change, and how to evaluate that progress reliably.</p>
-        <p class="news"><strong>News:</strong> My paper was accepted as a <strong>Spotlight</strong> at the NeurIPS 2026 Continual World Model Workshop. <a href="#publication">Read more &rarr;</a></p>
-      </section>
-      <section id="research">
-        <h2>Research Interests</h2>
-        <ul class="interest-list">
-          <li><strong>Continual Reinforcement Learning</strong><span>How long-lived agents learn continuously from observation, action, and reward in changing environments, developing representations and world models for prediction, planning, and control without domain-specific prior knowledge.</span></li>
-          <li><strong>Fundamental Principles of Intelligence</strong><span>How intelligence can be understood through general principles of learning, inference, and decision-making, drawing on active inference and algorithmic information theory.</span></li>
-          <li><strong>Mind and Consciousness</strong><span>How cognition and subjective experience arise through the interaction of mind, body, and environment, explored through embodied cognition and computational phenomenology.</span></li>
-        </ul>
-      </section>
+    <main id="main-content" class="content" tabindex="-1">
+      <section id="about" class="section">
+        <p class="eyebrow">About</p>
+        <p class="hero">I study how agents can <em>continually learn and adapt</em> as their environments change — and how to evaluate that progress reliably.</p>
+        <p>I am a second-year Bachelor of Science student at the University of Sydney, majoring in <strong>Mathematics and Computer Science</strong>. My main interest is <strong>Continual Reinforcement Learning</strong>: long-lived agents that keep learning from observation, action and reward, without relying on domain-specific prior knowledge.</p>
 
-
-      <section id="publication">
-        <h2>Papers</h2>
-        <article class="publication">
-          <h3>World Drift or Question Drift? Question Identity as a Precondition for Continual World Model Evaluation</h3>
-          <p class="publication-authors">Shanglong Hu</p>
-          <p class="publication-venue">Continual World Model Workshop, NeurIPS 2026 <span>·</span> Spotlight</p>
-          <div class="paper-links"><a href="./ShanglongHu_World_Drift_or_Question_Drift.pdf" target="_blank" rel="noopener noreferrer">PDF</a><a href="https://openreview.net/forum?id=kKaFwdnNal" target="_blank" rel="noopener noreferrer">OpenReview</a><a href="https://www.alphaxiv.org/pdf/2611.question-drift-world-model-evaluation" target="_blank" rel="noopener noreferrer">AlphaXiv</a></div>
-        </article>
-      </section>
-
-      <section id="experience">
-        <h2>Experience</h2>
-        <div class="entry">
-          <div class="entry-date">July 2026,<br>Shanghai</div>
-          <article>
-            <h3><a href="https://www.sii.edu.cn/2026/0727/c60a1166/page.htm">2026 Openmind Summer School on Reinforcement Learning</a></h3>
-            <p class="project-title"><strong>Predictive State Representations for Continual Reinforcement Learning: An Exploratory Study</strong></p>
-            <p class="project-team">Team Project</p>
-            <p class="award"><a class="award-label" href="./thoughtfulness-award.jpg" target="_blank" rel="noopener noreferrer" aria-label="View Thoughtfulness Award certificate">Thoughtfulness Award <span aria-hidden="true">↗</span></a></p>
-          </article>
+        <div class="news" aria-labelledby="news-title">
+          <h3 id="news-title" class="news-title">News</h3>
+          <ul class="news-list">
+            <li>
+              <time datetime="2026-11">Nov 2026</time>
+              <span>My paper on question drift was accepted as a <span class="badge badge-warm">Spotlight</span> at the NeurIPS 2026 Continual World Model Workshop. <a href="#publication">Read the paper&nbsp;→</a></span>
+            </li>
+            <li>
+              <time datetime="2026-07">Jul 2026</time>
+              <span>Our team project received the <strong>Thoughtfulness Award</strong> at the Openmind Summer School on Reinforcement Learning in Shanghai.</span>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <footer><span>Shanglong Hu</span><a href="mailto:shhu7334@uni.sydney.edu.au">Email</a><a href="./privacy.html">Privacy</a><a href="#about">Back to top ↑</a></footer>
+      <section id="research" class="section">
+        <h2 class="section-title">Research Interests</h2>
+        <ul class="interest-grid">
+          <li class="interest interest-primary reveal">
+            <div class="interest-head"><span class="interest-num" aria-hidden="true">01</span><span class="badge">Primary focus</span></div>
+            <h3>Continual Reinforcement Learning</h3>
+            <p>How long-lived agents learn continuously from observation, action, and reward in changing environments, developing representations and world models for prediction, planning, and control without domain-specific prior knowledge.</p>
+          </li>
+          <li class="interest reveal">
+            <div class="interest-head"><span class="interest-num" aria-hidden="true">02</span></div>
+            <h3>Fundamental Principles of Intelligence</h3>
+            <p>How intelligence can be understood through general principles of learning, inference, and decision-making, drawing on active inference and algorithmic information theory.</p>
+          </li>
+          <li class="interest reveal">
+            <div class="interest-head"><span class="interest-num" aria-hidden="true">03</span></div>
+            <h3>Mind and Consciousness</h3>
+            <p>How cognition and subjective experience arise through the interaction of mind, body, and environment, explored through embodied cognition and computational phenomenology.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="publication" class="section">
+        <h2 class="section-title">Papers</h2>
+        <article class="paper reveal">
+          <a class="paper-figure" href="./ShanglongHu_World_Drift_or_Question_Drift.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open the paper PDF">
+            <img src="./question-drift-figure.webp" width="1701" height="771" loading="lazy" decoding="async" alt="Figure 1 of the paper: a predicted collision risk rises from 0.45 to 0.68; decomposition attributes −0.09 to world drift, +0.28 to question drift and +0.04 to error change.">
+          </a>
+          <div class="paper-body">
+            <div class="paper-tags">
+              <span class="badge">NeurIPS 2026 Workshop</span>
+              <span class="badge badge-warm">Spotlight</span>
+            </div>
+            <h3 class="paper-title">World Drift or Question Drift? Question Identity as a Precondition for Continual World Model Evaluation</h3>
+            <p class="paper-authors"><strong>Shanglong Hu</strong></p>
+            <p class="paper-venue">Continual World Model Workshop, NeurIPS 2026</p>
+            <p class="paper-tldr"><span>TL;DR</span> A fixed label is not a fixed question. A change in a world model's prediction splits exactly into world drift, question drift and a change in error — so continual evaluation must log its questions and score each prediction against its own target.</p>
+            <div class="paper-links">
+              <a class="btn btn-primary" href="./ShanglongHu_World_Drift_or_Question_Drift.pdf" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>PDF</a>
+              <a class="btn" href="https://openreview.net/forum?id=kKaFwdnNal" target="_blank" rel="noopener noreferrer">OpenReview</a>
+              <a class="btn" href="https://www.alphaxiv.org/pdf/2611.question-drift-world-model-evaluation" target="_blank" rel="noopener noreferrer">AlphaXiv</a>
+            </div>
+            <details class="paper-more">
+              <summary>Abstract</summary>
+              <p>Continual world models are commonly evaluated by tracking their predictions under fixed labels across model updates. We argue that such comparisons are meaningful only if the underlying question (what is predicted, under which conditions and within which horizon) stays the same. When this question changes while the label does not, we call it question drift. For example, a predicted collision risk can rise even as the environment becomes safer, simply because its deadline was extended. We show that a change in prediction splits exactly into world drift, question drift and a change in prediction error, and we prove that a log keeping only the current question definition may not even reveal whether the question changed. Question drift also distorts scoring: matched risk varies with event uncertainty even for a correct forecast, scoring revised predictions against the previous question’s targets can overstate or understate error, and replacing historical questions hides forgetting. Controlled grid-world experiments with exact simulator probabilities illustrate each effect. We conclude with three recommendations for continual evaluation: log question definitions and evaluation protocols, score each prediction against its own target, and evaluate new checkpoints on fixed historical questions.</p>
+            </details>
+            <details class="paper-more">
+              <summary>BibTeX</summary>
+              <div class="bibtex">
+                <button class="copy-btn" type="button" data-copy-target="bibtex-hu2026">Copy</button>
+<pre id="bibtex-hu2026"><code>@inproceedings{hu2026questiondrift,
+  title     = {World Drift or Question Drift? Question Identity as a
+               Precondition for Continual World Model Evaluation},
+  author    = {Hu, Shanglong},
+  booktitle = {NeurIPS 2026 Workshop on Continual World Models},
+  year      = {2026},
+  url       = {https://openreview.net/forum?id=kKaFwdnNal}
+}</code></pre>
+              </div>
+            </details>
+          </div>
+        </article>
+      </section>
+
+      <section id="experience" class="section">
+        <h2 class="section-title">Experience</h2>
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <p class="timeline-meta"><time datetime="2026-07">July 2026</time> · Shanghai</p>
+            <h3><a href="https://www.sii.edu.cn/2026/0727/c60a1166/page.htm" target="_blank" rel="noopener noreferrer">2026 Openmind Summer School on Reinforcement Learning</a></h3>
+            <p class="timeline-project">Predictive State Representations for Continual Reinforcement Learning: An Exploratory Study</p>
+            <p class="timeline-note">Team project</p>
+            <a class="badge badge-warm badge-link" href="./thoughtfulness-award.jpg" target="_blank" rel="noopener noreferrer" aria-label="View Thoughtfulness Award certificate">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a6 6 0 0 0-3.6 10.8L7 22l5-2.6L17 22l-1.4-9.2A6 6 0 0 0 12 2zm0 2.2a3.8 3.8 0 1 1 0 7.6 3.8 3.8 0 0 1 0-7.6z"/></svg>Thoughtfulness Award <span aria-hidden="true">↗</span></a>
+          </li>
+        </ol>
+      </section>
+
+      <footer class="footer">
+        <span>© 2026 Shanglong Hu · Updated Nov 2026</span>
+        <nav aria-label="Footer">
+          <a href="mailto:shhu7334@uni.sydney.edu.au">Email</a>
+          <a href="./privacy.html">Privacy</a>
+          <a href="#about">Back to top ↑</a>
+        </nav>
+      </footer>
     </main>
   </div>
 </body>
