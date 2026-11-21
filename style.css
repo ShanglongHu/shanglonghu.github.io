@@ -165,9 +165,6 @@ svg { fill: currentColor; }
 }
 
 .brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
   color: var(--text);
   font-weight: 600;
   font-size: .98rem;
@@ -175,19 +172,7 @@ svg { fill: currentColor; }
   margin-right: auto;
 }
 .brand:hover { color: var(--text); text-decoration: none; }
-.brand-mark {
-  display: inline-grid;
-  place-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 8px;
-  background: #244763;
-  color: #e4fff6;
-  font-size: .72rem;
-  font-weight: 600;
-  letter-spacing: .02em;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .08);
-}
+
 
 .topnav { display: flex; gap: 4px; }
 .topnav a {
@@ -692,7 +677,7 @@ html:not(.js) .copy-btn { display: none; }
   :root { --gutter: 20px; --topbar-h: 56px; }
 
   .topbar-inner { gap: 6px; }
-  .brand-name { display: none; }
+  .brand { display: none; }
   .topnav {
     flex: 1;
     min-width: 0;
@@ -703,8 +688,7 @@ html:not(.js) .copy-btn { display: none; }
   .topnav::-webkit-scrollbar { display: none; }
   /* Auto margin (not justify-content) keeps the first link reachable if it overflows. */
   .topnav a:first-child { margin-left: auto; }
-  .topnav a { padding: 6px 5px; font-size: .82rem; white-space: nowrap; }
-  .brand { margin-right: 0; }
+  .topnav a { padding: 6px 8px; font-size: .84rem; white-space: nowrap; }
 
   .layout { display: block; }
   .sidebar { padding: 32px 0 0; }
